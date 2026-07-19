@@ -1,0 +1,24 @@
+[2026-07-19 19:27:08] hash ews_analysis.py: 4147ed875f5fac978b5debb75f3f3be8cd18e5acc3c3de329aa2be49c6c21057
+[2026-07-19 19:27:08] hash ENMIENDA_2_VALIDACION_FROZEN.md: 22816aa655f7eef2d211115aaa61c928c204eaaf3b50722bd2cb57a83d363dbc
+[2026-07-19 19:27:08] 1/5 ingesta de la rama descendente (~460 MB la primera vez)
+[2026-07-19 19:28:03]    2200 años: 2201-4400
+[2026-07-19 19:28:03] 2/5 gate V1: paridad del loader
+[2026-07-19 19:28:03]    V1 = {'max_abs_diff_AMOC_Sv': 2.0466313443989748e-07, 'passed': False}
+[2026-07-19 19:29:18] hash ews_analysis.py: 4147ed875f5fac978b5debb75f3f3be8cd18e5acc3c3de329aa2be49c6c21057
+[2026-07-19 19:29:18] hash ENMIENDA_2_VALIDACION_FROZEN.md: 22816aa655f7eef2d211115aaa61c928c204eaaf3b50722bd2cb57a83d363dbc
+[2026-07-19 19:29:18] 1/5 ingesta de la rama descendente (~460 MB la primera vez)
+[2026-07-19 19:29:20]    2200 años: 2201-4400
+[2026-07-19 19:29:20] 2/5 gate V1: paridad del loader
+[2026-07-19 19:29:20]    V1 = {'max_abs_diff_AMOC_Sv': 2.0466313443989748e-07, 'passed': False}
+[2026-07-19 19:35:16] hash ews_analysis.py: 4147ed875f5fac978b5debb75f3f3be8cd18e5acc3c3de329aa2be49c6c21057
+[2026-07-19 19:35:16] hash ENMIENDA_2_VALIDACION_FROZEN.md: 22816aa655f7eef2d211115aaa61c928c204eaaf3b50722bd2cb57a83d363dbc
+[2026-07-19 19:35:16] 1/5 ingesta de la rama descendente (~460 MB la primera vez)
+[2026-07-19 19:35:18]    2200 años: 2201-4400
+[2026-07-19 19:35:18] 2/5 gate V1: paridad del loader
+[2026-07-19 19:35:18]    V1 = {'max_abs_diff_AMOC_Sv': 2.0466313443989748e-07, 'tolerance_Sv': 1e-05, 'amendment': 'ENMIENDA_3 (cross-archive numerical provenance)', 'passed': True}
+[2026-07-19 19:35:18] 3/5 serie psi del ensemble (24 configs por origen; puede tardar ~1-2 min)
+[2026-07-19 19:35:47] 4/5 alarmas certificadas (regla A2, umbral congelado 0.46)
+[2026-07-19 19:35:47]    alarmas: [(2761.0, 2811.0), (3191.0, 3251.0), (3501.0, 4131.0), (4211.0, 4321.0)]
+[2026-07-19 19:35:47] 5/5 verdad de terreno y veredicto V2
+[2026-07-19 19:35:48]    t*=4143 | alarma=None | lead=None | V2=FALLA
+[2026-07-19 19:35:48] listo: outputs_validation/VALIDATION_DOWNBRANCH_RESULTS.json

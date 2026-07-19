@@ -1,0 +1,45 @@
+{
+  "amendment": "ENMIENDA_2 v-congelada",
+  "V1": {
+    "max_abs_diff_AMOC_Sv": 2.0466313443989748e-07,
+    "tolerance_Sv": 1e-05,
+    "amendment": "ENMIENDA_3 (cross-archive numerical provenance)",
+    "passed": true
+  },
+  "transition_year_tstar": 4143.0,
+  "certified_alarms": [
+    [
+      2761.0,
+      2811.0
+    ],
+    [
+      3191.0,
+      3251.0
+    ],
+    [
+      3501.0,
+      4131.0
+    ],
+    [
+      4211.0,
+      4321.0
+    ]
+  ],
+  "dead_alarms_pre_tstar": [
+    2761.0,
+    3191.0,
+    3501.0
+  ],
+  "alarm_year": null,
+  "lead_years": null,
+  "V2_passed": false,
+  "frozen": {
+    "thr_config": 0.9994927450828757,
+    "thr_psi": 0.46,
+    "trail_k": 5,
+    "origins": [
+      2601.0,
+      10.0
+    ]
+  }
+}
