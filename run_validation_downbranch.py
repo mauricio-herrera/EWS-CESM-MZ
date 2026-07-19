@@ -30,6 +30,7 @@ BRANCH_START = 2200.0
 F_H_TOP = 0.66
 F_RATE = 3.0e-4
 THR_CONFIG = 0.9994927450828757      # umbral supercrítico por configuración (ascendente)
+V1_TOL_SV = 1.0e-5                   # ENMIENDA 3: tolerancia entre archivos (ver ENMIENDA_3_TOLERANCIA_V1.md)
 THR_PSI = 0.46                       # umbral de alarma sobre media móvil de psi
 TRAIL_K = 5                          # 5 orígenes = 50 años
 ORIGIN_START, ORIGIN_STEP = 2601.0, 10.0
@@ -73,7 +74,9 @@ def parity_v1(df: pd.DataFrame, cache: Path) -> dict:
         t = np.asarray(r["time"][:]); a = np.asarray(r["Transport"][:])
     sel = (t >= df.year.min()) & (t <= df.year.max())
     d = float(np.abs(df.amoc_transport_0_1000m_26N_Sv.values - a[sel]).max())
-    return {"max_abs_diff_AMOC_Sv": d, "passed": d <= 1e-10}
+    return {"max_abs_diff_AMOC_Sv": d, "tolerance_Sv": V1_TOL_SV,
+            "amendment": "ENMIENDA_3 (cross-archive numerical provenance)",
+            "passed": d <= V1_TOL_SV}
 
 
 def psi_series(df: pd.DataFrame, profiles: np.ndarray) -> tuple[np.ndarray, np.ndarray]:
