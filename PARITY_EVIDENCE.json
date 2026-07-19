@@ -1,0 +1,49 @@
+{
+  "gate": "E1_loader_parity",
+  "tolerance_Sv": 1e-10,
+  "status": "PASSED",
+  "periods_checked": [
+    [
+      1,
+      50
+    ],
+    [
+      1701,
+      1750
+    ],
+    [
+      1751,
+      1800
+    ]
+  ],
+  "details": [
+    {
+      "period": [
+        1,
+        50
+      ],
+      "max_abs_diff_AMOC_Sv": 1.7763568394002505e-15,
+      "max_abs_diff_FovS_Sv": 1.6653345369377348e-16
+    },
+    {
+      "period": [
+        1701,
+        1750
+      ],
+      "max_abs_diff_AMOC_Sv": 1.7763568394002505e-15,
+      "max_abs_diff_FovS_Sv": 1.249000902703301e-16
+    },
+    {
+      "period": [
+        1751,
+        1800
+      ],
+      "max_abs_diff_AMOC_Sv": 1.7763568394002505e-15,
+      "max_abs_diff_FovS_Sv": 1.1102230246251565e-16
+    }
+  ],
+  "reference_files": {
+    "AMOC": "Data/CESM/Ocean/AMOC_transport_depth_0-1000m.nc",
+    "FovS": "Data/CESM/Ocean/FOV_index_section_34S.nc"
+  }
+}

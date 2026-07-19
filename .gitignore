@@ -1,0 +1,6 @@
+cache_cesm/
+cache_hysteresis/
+outputs_run/
+outputs_validation/
+__pycache__/
+*.pyc
