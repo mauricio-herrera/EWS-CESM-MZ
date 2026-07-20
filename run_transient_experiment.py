@@ -144,12 +144,21 @@ def main():
         else:
             pre_max = float(np.nanmax(st))
             lead, ya = None, None
-        alarms = None
+        # descriptivo: alarmas certificadas en runs no-colapsantes (= falsas alarmas)
+        false_alarm = None
+        if ons is None:
+            fa_lead, fa_year = ea.lead_time_refit(yrs, st, thr_psi, +1, tipping=float("inf"))
+            false_alarm = fa_year
+        n_pre = int((yrs < ons).sum()) if ons is not None else int(len(yrs))
         results["runs"][key] = {"n_years": int(len(t)), "onset": ons,
                                 "ref_mean": mu, "ref_sd": sd,
                                 "pre_onset_trailing_max": pre_max,
+                                "n_evaluable_pre_onset": n_pre,
+                                "window_limited": bool(ons is not None and n_pre < 5),
+                                "false_alarm_year": false_alarm,
                                 "alarm_year": ya, "lead_years": lead}
-        log(f"   {key}: años={len(t)} onset={ons} pre_max={pre_max} alarma={ya} lead={lead}")
+        log(f"   {key}: años={len(t)} onset={ons} pre_max={pre_max} "
+            f"n_pre={n_pre} alarma={ya} lead={lead} falsa_alarma={false_alarm}")
 
     log("3/5 gates")
     coll = {k: v for k, v in results["runs"].items() if v["onset"] is not None}
@@ -157,13 +166,19 @@ def main():
     a_ok = results["control_alarm"][0] is None
     b_ok = all(v["pre_onset_trailing_max"] is not None and
                v["pre_onset_trailing_max"] >= thr_psi for v in coll.values()) if coll else False
-    c_ok = (min(v["pre_onset_trailing_max"] for v in coll.values())
-            > max([v["pre_onset_trailing_max"] for v in noco.values()] + [0.0])) if coll and noco else None
+    coll_valid = [v["pre_onset_trailing_max"] for v in coll.values()
+                  if v["pre_onset_trailing_max"] is not None]
+    noco_vals = [v["pre_onset_trailing_max"] for v in noco.values()
+                 if v["pre_onset_trailing_max"] is not None]
+    c_ok = (min(coll_valid) > max(noco_vals + [0.0])) if coll_valid and noco_vals else None
+    t3 = {k: v["lead_years"] for k, v in coll.items() if v["lead_years"] is not None}
     results["gates"] = {"T2a_no_control_alarm": a_ok,
                         "T2b_all_collapsing_exceed": b_ok,
                         "T2c_separation": c_ok,
                         "T2": bool(a_ok and b_ok and (c_ok in (True, None))),
-                        "n_collapsing": len(coll), "n_noncollapsing": len(noco)}
+                        "n_collapsing": len(coll), "n_noncollapsing": len(noco),
+                        "T3_certified_leads": t3,
+                        "window_limited_runs": [k for k,v in results["runs"].items() if v.get("window_limited")]}
     log(f"   {results['gates']}")
     results["hashes"] = {f: hashlib.sha256(open(f,'rb').read()).hexdigest()
                          for f in ("ews_analysis.py", "PROTOCOL_TRANSIENT_FROZEN.md")}
