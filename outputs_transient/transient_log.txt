@@ -1,0 +1,39 @@
+[2026-07-20 19:12:03] hash ews_analysis.py: 4147ed875f5fac978b5debb75f3f3be8cd18e5acc3c3de329aa2be49c6c21057
+[2026-07-20 19:12:03] hash PROTOCOL_TRANSIENT_FROZEN.md: 4b7fc0c50edc6a53974567b6b780f917a555d67384a31a9a6cfb265f245080f8
+[2026-07-20 19:12:03] 1/5 control CESM_0600: descarga y calibración
+[2026-07-20 19:12:03]    T1 (fijado por construcción en runs escalares): diff=0.0 <= 1e-05
+[2026-07-20 19:12:09]    umbral supercrítico (control): 1.004156 (p99.0)
+[2026-07-20 19:12:12]    umbral de alarma psi: 0.027 (max control 0.017)
+[2026-07-20 19:12:12]    alarmas certificadas en control: (None, None)
+[2026-07-20 19:12:12] 2/5 runs de prueba
+[2026-07-20 19:12:15]    CESM_1500:AMOC_transport_depth_0-1000m_branch_QE: años=502 onset=None pre_max=0.008333333333333333 alarma=None lead=None
+[2026-07-20 19:12:18]    CESM_1550:AMOC_transport_depth_0-1000m_branch_QE: años=502 onset=None pre_max=0.03333333333333333 alarma=None lead=None
+[2026-07-20 19:12:21]    CESM_1600:AMOC_transport_depth_0-1000m_branch_QE: años=502 onset=1803.0 pre_max=0.0 alarma=None lead=None
+[2026-07-20 19:12:22]    CESM_1650:AMOC_transport_depth_0-1000m_branch_QE: años=232 onset=1782.0 pre_max=0.0 alarma=None lead=None
+[2026-07-20 19:12:23]    CESM_1700:AMOC_transport_depth_0-1000m_branch_QE: años=198 onset=1781.0 pre_max=None alarma=None lead=None
+[2026-07-20 19:12:27]    CESM_0600_climate_change:AMOC_transport_depth_0-1000m_RCP45: años=650 onset=2029.0 pre_max=0.14166666666666666 alarma=1995.0 lead=34.0
+[2026-07-20 19:12:32]    CESM_0600_climate_change:AMOC_transport_depth_0-1000m_RCP85: años=650 onset=2030.0 pre_max=0.14166666666666666 alarma=1995.0 lead=35.0
+[2026-07-20 19:12:36]    CESM_1500_climate_change:AMOC_transport_depth_0-1000m_RCP45: años=650 onset=2055.0 pre_max=0.375 alarma=2045.0 lead=10.0
+[2026-07-20 19:12:40]    CESM_1500_climate_change:AMOC_transport_depth_0-1000m_RCP85: años=650 onset=2043.0 pre_max=0.2583333333333333 alarma=2035.0 lead=8.0
+[2026-07-20 19:12:40] 3/5 gates
+[2026-07-20 19:18:40] hash ews_analysis.py: 4147ed875f5fac978b5debb75f3f3be8cd18e5acc3c3de329aa2be49c6c21057
+[2026-07-20 19:18:40] hash PROTOCOL_TRANSIENT_FROZEN.md: 4b7fc0c50edc6a53974567b6b780f917a555d67384a31a9a6cfb265f245080f8
+[2026-07-20 19:18:40] 1/5 control CESM_0600: descarga y calibración
+[2026-07-20 19:18:40]    T1 (fijado por construcción en runs escalares): diff=0.0 <= 1e-05
+[2026-07-20 19:18:45]    umbral supercrítico (control): 1.004156 (p99.0)
+[2026-07-20 19:18:48]    umbral de alarma psi: 0.027 (max control 0.017)
+[2026-07-20 19:18:48]    alarmas certificadas en control: (None, None)
+[2026-07-20 19:18:48] 2/5 runs de prueba
+[2026-07-20 19:18:50]    CESM_1500:AMOC_transport_depth_0-1000m_branch_QE: años=502 onset=None pre_max=0.008333333333333333 n_pre=77 alarma=None lead=None falsa_alarma=None
+[2026-07-20 19:18:53]    CESM_1550:AMOC_transport_depth_0-1000m_branch_QE: años=502 onset=None pre_max=0.03333333333333333 n_pre=77 alarma=None lead=None falsa_alarma=None
+[2026-07-20 19:18:55]    CESM_1600:AMOC_transport_depth_0-1000m_branch_QE: años=502 onset=1803.0 pre_max=0.0 n_pre=17 alarma=None lead=None falsa_alarma=None
+[2026-07-20 19:18:56]    CESM_1650:AMOC_transport_depth_0-1000m_branch_QE: años=232 onset=1782.0 pre_max=0.0 n_pre=8 alarma=None lead=None falsa_alarma=None
+[2026-07-20 19:18:56]    CESM_1700:AMOC_transport_depth_0-1000m_branch_QE: años=198 onset=1781.0 pre_max=None n_pre=0 alarma=None lead=None falsa_alarma=None
+[2026-07-20 19:19:00]    CESM_0600_climate_change:AMOC_transport_depth_0-1000m_RCP45: años=650 onset=2029.0 pre_max=0.14166666666666666 n_pre=12 alarma=1995.0 lead=34.0 falsa_alarma=None
+[2026-07-20 19:19:04]    CESM_0600_climate_change:AMOC_transport_depth_0-1000m_RCP85: años=650 onset=2030.0 pre_max=0.14166666666666666 n_pre=12 alarma=1995.0 lead=35.0 falsa_alarma=None
+[2026-07-20 19:19:08]    CESM_1500_climate_change:AMOC_transport_depth_0-1000m_RCP45: años=650 onset=2055.0 pre_max=0.375 n_pre=17 alarma=2045.0 lead=10.0 falsa_alarma=None
+[2026-07-20 19:19:12]    CESM_1500_climate_change:AMOC_transport_depth_0-1000m_RCP85: años=650 onset=2043.0 pre_max=0.2583333333333333 n_pre=15 alarma=2035.0 lead=8.0 falsa_alarma=None
+[2026-07-20 19:19:12] 3/5 gates
+[2026-07-20 19:19:12]    {'T2a_no_control_alarm': True, 'T2b_all_collapsing_exceed': False, 'T2c_separation': False, 'T2': False, 'n_collapsing': 7, 'n_noncollapsing': 2, 'T3_certified_leads': {'CESM_0600_climate_change:AMOC_transport_depth_0-1000m_RCP45': 34.0, 'CESM_0600_climate_change:AMOC_transport_depth_0-1000m_RCP85': 35.0, 'CESM_1500_climate_change:AMOC_transport_depth_0-1000m_RCP45': 10.0, 'CESM_1500_climate_change:AMOC_transport_depth_0-1000m_RCP85': 8.0}, 'window_limited_runs': ['CESM_1700:AMOC_transport_depth_0-1000m_branch_QE']}
+[2026-07-20 19:19:12] 4/5 resultados escritos: outputs_transient/TRANSIENT_EXPERIMENT_RESULTS.json
+[2026-07-20 19:19:12] 5/5 fin
